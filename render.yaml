@@ -1,0 +1,12 @@
+# Exported from Render on 2025-08-14T12:20:10Z
+services:
+- type: web
+  name: Sms-Email-spam-classifier/sarthak2004.dwivedi
+  runtime: python
+  repo: https://github.com/Sarthakdwivedi78/Sms-Email-spam-classifier
+  plan: free
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app
+  autoDeployTrigger: commit
+version: "1"
